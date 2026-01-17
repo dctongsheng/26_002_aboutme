@@ -138,23 +138,30 @@
             </div>
         </section>
 
-        <!-- 博客板块（预留） -->
+        <!-- 博客板块 -->
         <section class="section blog-section" id="blog">
             <div class="container">
                 <h2 class="section-title">
                     <span class="title-icon">>></span>
                     博客
                 </h2>
-                <div class="blog-placeholder">
-                    <div class="construction-sign">
-                        <div class="construction-icon">🚧</div>
-                        <h3 class="construction-title">博客即将上线</h3>
-                        <p class="construction-text">精彩内容正在准备中...</p>
-                        <div class="progress-bar">
-                            <div class="progress-fill"></div>
-                        </div>
-                        <p class="construction-status">开发进度: 60%</p>
+
+                <!-- 博客列表视图 -->
+                <div id="blog-list-view" class="blog-view">
+                    <div class="blog-filters">
+                        <button class="filter-btn active" data-filter="all">全部</button>
+                        <button class="filter-btn" data-filter="技术">技术</button>
+                        <button class="filter-btn" data-filter="生活">生活</button>
                     </div>
+                    <div class="blog-grid" id="blog-grid"></div>
+                </div>
+
+                <!-- 博客详情视图 -->
+                <div id="blog-detail-view" class="blog-view hidden">
+                    <button class="back-btn" id="back-to-blog">
+                        <span class="back-icon">←</span> 返回博客列表
+                    </button>
+                    <article class="blog-post" id="blog-post"></article>
                 </div>
             </div>
         </section>
@@ -219,6 +226,8 @@
         </div>
     </footer>
 
+    <script src="lib/marked.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
 </body>
 </html>

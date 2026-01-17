@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "slug": "welcome",
+      "title": "欢迎来到我的博客",
+      "date": "2026-01-15",
+      "excerpt": "这是我的第一篇博客文章，介绍了博客系统的技术架构和未来计划。",
+      "tags": ["公告", "生活"],
+      "category": "生活"
+    },
+    {
+      "slug": "agent-development",
+      "title": "AI Agent开发实践心得",
+      "date": "2026-01-16",
+      "excerpt": "分享我在开发AI Agent过程中的一些经验和踩过的坑，包括技术选型和最佳实践。",
+      "tags": ["AI", "Agent", "开发"],
+      "category": "技术"
+    }
+  ]
+}

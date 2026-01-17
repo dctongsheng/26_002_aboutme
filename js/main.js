@@ -32,9 +32,21 @@ function highlightNav() {
 // ==================== 平滑滚动 ====================
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+
+        // 如果是博客链接，允许默认行为（由blog.js处理）
+        if (href === '#blog' || href.startsWith('#blog/')) {
+            // 移动端关闭菜单
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+            }
+            return;
+        }
+
+        // 其他链接使用平滑滚动
         e.preventDefault();
-        const targetId = link.getAttribute('href');
-        const targetSection = document.querySelector(targetId);
+        const targetSection = document.querySelector(href);
 
         if (targetSection) {
             const offsetTop = targetSection.offsetTop - 70;
